@@ -61,8 +61,10 @@ class MobilController extends Controller
         return view('edit', compact('mobil'));
     }
 
-    public function update(Request $request, Mobil $mobil)
+    public function update(Request $request, $id)
     {
+        $mobil = Mobil::findOrFail($id);
+
         $request->validate([
             'nama' => 'required',
             'merek' => 'required',
