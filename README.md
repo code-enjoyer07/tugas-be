@@ -12,3 +12,5 @@ php artisan storage:link
 ```
 
 to run type `php artisan serve`
+username: admin
+password: admin
